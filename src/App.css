@@ -106,8 +106,8 @@ while keeping them available to the keyboard */
 .summary__option {
   display: grid;
   grid-template-areas:
-    'key cost'
-    'value value';
+    "key cost"
+    "value value";
   padding: 0.2rem;
   margin-top: 1rem;
 }
