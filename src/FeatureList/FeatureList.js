@@ -10,15 +10,14 @@ class FeatureList extends Component {
         const itemHash = slugify(JSON.stringify(item));
         return (
           <div key={itemHash} className="feature__item">
-            <input
-              type="radio"
-              id={itemHash}
-              className="feature__option"
-              name={slugify(feature)}
-              checked={item.name === this.props.selected[feature].name}
-              onChange={(e) => this.props.handleUpdateFeature(feature, item)}
+            <FeatureItem
+              key={itemHash}
+              item={item}
+              itemHash={itemHash}
+              feature={feature}
+              selected={this.props.selected}
+              handleUpdateFeature={this.props.handleUpdateFeature}
             />
-            <FeatureItem item={item} itemHash={itemHash} />
           </div>
         );
       });

@@ -10,6 +10,7 @@ class Cart extends Component {
 
       return (
         <CartItem
+          key={featureHash}
           featureHash={featureHash}
           selectedOption={selectedOption}
           feature={feature}
