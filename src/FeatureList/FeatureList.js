@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import slugify from "slugify";
-
-// This object will allow us to
-// easily convert numbers into US dollar values
-const USCurrencyFormat = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-});
+import FeatureItem from "../FeatureItem/FeatureItem";
 
 class FeatureList extends Component {
   render() {
@@ -24,9 +18,7 @@ class FeatureList extends Component {
               checked={item.name === this.props.selected[feature].name}
               onChange={(e) => this.props.handleUpdateFeature(feature, item)}
             />
-            <label htmlFor={itemHash} className="feature__label">
-              {item.name} ({USCurrencyFormat.format(item.cost)})
-            </label>
+            <FeatureItem item={item} itemHash={itemHash} />
           </div>
         );
       });
