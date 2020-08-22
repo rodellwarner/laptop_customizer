@@ -22,10 +22,14 @@ class FeatureList extends Component {
         );
       });
 
+      function FeatureLabel() {
+        return <h3>{feature}</h3>;
+      }
+
       return (
         <fieldset className="feature" key={featureHash}>
           <legend className="feature__name">
-            <h3>{feature}</h3>
+            <FeatureLabel />
           </legend>
           {options}
         </fieldset>
