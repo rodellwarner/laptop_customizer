@@ -9,16 +9,14 @@ class FeatureList extends Component {
       const options = this.props.features[feature].map((item) => {
         const itemHash = slugify(JSON.stringify(item));
         return (
-          <div key={itemHash} className="feature__item">
-            <FeatureItem
-              key={itemHash}
-              item={item}
-              itemHash={itemHash}
-              feature={feature}
-              selected={this.props.selected}
-              handleUpdateFeature={this.props.handleUpdateFeature}
-            />
-          </div>
+          <FeatureItem
+            key={itemHash}
+            item={item}
+            itemHash={itemHash}
+            feature={feature}
+            selected={this.props.selected}
+            handleUpdateFeature={this.props.handleUpdateFeature}
+          />
         );
       });
 

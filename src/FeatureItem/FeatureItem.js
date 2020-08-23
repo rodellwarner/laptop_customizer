@@ -11,7 +11,7 @@ const USCurrencyFormat = new Intl.NumberFormat("en-US", {
 class FeatureItem extends Component {
   render() {
     return (
-      <div>
+      <div className="feature__item">
         <input
           type="radio"
           id={this.props.itemHash}
