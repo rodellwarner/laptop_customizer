@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import slugify from "slugify";
 import FeatureItem from "../FeatureItem/FeatureItem";
+import FEATURES from "../FEATURES";
 
 class Feature extends Component {
   render() {
     const labelForFeature = this.props.feature;
     const featureHash = this.props.feature + "-" + this.props.index;
-    const options = this.props.features[this.props.feature].map((item) => {
+    const options = FEATURES[this.props.feature].map((item) => {
       const itemHash = slugify(JSON.stringify(item));
       return (
         <FeatureItem

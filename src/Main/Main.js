@@ -42,7 +42,6 @@ class Main extends Component {
     return (
       <main>
         <FeatureList
-          features={this.props.features}
           selected={selected}
           handleUpdateFeature={this.updateFeature}
         />
